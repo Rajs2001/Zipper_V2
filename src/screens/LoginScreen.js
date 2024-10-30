@@ -17,7 +17,10 @@ const LoginScreen = () => {
   };
 
   const privacyclick = ()=>{
-    Alert('Privacy button clicked')
+    alert('Privacy button click function');
+  }
+  const TnCBTNclick = ()=>{
+    alert('TnC button click function');
   }
 
   return (
@@ -59,7 +62,7 @@ const LoginScreen = () => {
           </TouchableOpacity>
           <Text style={styles.linkSeparator}> </Text>
           <TouchableOpacity>
-            <Text style={styles.link}>Terms & Conditions</Text>
+            <Text style={styles.link}onPress={TnCBTNclick}>Terms & Conditions</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -119,6 +122,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     fontFamily: 'Inter-Regular',
     fontSize: 16,
+    color:"black",
   },
   continueButton: {
     backgroundColor: '#CCCCCC',

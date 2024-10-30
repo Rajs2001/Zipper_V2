@@ -1,3 +1,6 @@
+import React, { useEffect, useState} from 'react';
+import * as Font from 'expo-font';
+import { ActivityIndicator, View } from 'react-native';
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import  LoginScreen  from "./src/screens/LoginScreen";
@@ -11,12 +14,14 @@ enableScreens();
 const stack = createStackNavigator();
 
 export default function App(){
+
+  
   return(
     <NavigationContainer>
       <stack.Navigator initialRouteName="LoginScreen">
       <stack.Screen name="LoginScreen" component={LoginScreen}/>
-      <stack.Screen name="SignUpScreen" component={SignUpScreen}/>
-      <stack.Screen name="OTPVerificationScreen" component={OTPVerificationScreen}/>
+      <stack.Screen name="SignUp" component={SignUpScreen}/>
+      <stack.Screen name="OTPVerification" component={OTPVerificationScreen}/>
 
       </stack.Navigator>
     </NavigationContainer>

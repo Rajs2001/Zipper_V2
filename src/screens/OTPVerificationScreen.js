@@ -25,12 +25,12 @@ const OTPVerificationScreen = () => {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
       setIsLoading(false);
-      // navigation.navigate('SignUp');
+      navigation.navigate('SignUp');
     }
   };
 
   const handleResendOTP = () => {
-    // TODO: Implement OTP resend functionality
+    alert ('resend otp function goes here from serverside')
   };
 
   return (
@@ -131,6 +131,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 18,
     fontFamily: 'Inter-Regular',
+    color:"black",
   },
   instructions: {
     fontSize: 14,
