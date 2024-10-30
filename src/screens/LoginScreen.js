@@ -25,9 +25,6 @@ const LoginScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <TouchableOpacity style={styles.backButton}>
-        <Text style={styles.backButtonText}>←</Text>
-      </TouchableOpacity>
       <View style={styles.content}>
         <Text style={styles.logo}>ZIPPER</Text>
         <Text style={styles.title}>Log in or Sign Up</Text>
@@ -57,12 +54,12 @@ const LoginScreen = () => {
           By continuing, you agree to our
         </Text>
         <View style={styles.linkContainer}>
-          <TouchableOpacity>
-            <Text style={styles.link} onPress={privacyclick}>Privacy Policy</Text>
+          <TouchableOpacity  onPress={privacyclick}>
+            <Text style={styles.link}>Privacy Policy</Text>
           </TouchableOpacity>
           <Text style={styles.linkSeparator}> </Text>
-          <TouchableOpacity>
-            <Text style={styles.link}onPress={TnCBTNclick}>Terms & Conditions</Text>
+          <TouchableOpacity onPress={TnCBTNclick}>
+            <Text style={styles.link} >Terms & Conditions</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -120,9 +117,9 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 50,
     paddingHorizontal: 10,
-    fontFamily: 'Inter-Regular',
+    fontFamily: 'Inter-Bold',
     fontSize: 16,
-    color:"black",
+    color:"black"
   },
   continueButton: {
     backgroundColor: '#CCCCCC',
